@@ -1,0 +1,62 @@
+#include <stdio.h>
+void torre(){
+    int t;
+    for( t = 0; t <= 5; t++){
+        printf("direita %d\n", t);
+    }
+
+}
+
+void bispo(){
+   int h, v;
+   
+    for(v = 1; v <=5; v++){
+        for(h = 0; h <= 1; h++){
+            printf("direita%d\n", v);
+        }
+        printf("cima%d\n", h);
+    }
+
+}
+
+void rainha(){
+   int r = 0;
+
+    do{
+        printf("esquerda%d\n", r);
+        r++;
+    }while(r <= 8);
+}
+int main(){
+
+torre();
+
+bispo();
+
+rainha();
+
+//estrutura cavalo:
+int i, j;
+
+printf("digite o movimento do cavalo:\n");
+
+    printf("digite a lateral:\n");
+    scanf("%d", &j);
+
+    printf("digite a cima:\n");
+    scanf("%d", &i);
+
+    if(j > 2){
+        printf("o movimento do cavalo so pode ser de dois blocos!\n");
+    }
+
+    if(i > 1){
+        printf("o movimento do cavalo so pode ser de um bloco!\n");
+    }
+
+    for(i, j ; i <= 1, j <=2; i++, j++){
+        printf("direita%d, cima%d", j, i);
+    }
+
+    return 0;    
+}
